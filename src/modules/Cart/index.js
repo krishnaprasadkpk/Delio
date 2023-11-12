@@ -89,8 +89,8 @@ const Cart = () => {
                       <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
                     </svg>
                   </div>
-                  <span className="text-center w-1/5 font-semibold text-sm">${cart?.price}</span>
-                  <span className="text-center w-1/5 font-semibold text-sm">${cart?.price * cart?.quantity}</span>
+                  <span className="text-center w-1/5 font-semibold text-sm">₹{cart?.price}</span>
+                  <span className="text-center w-1/5 font-semibold text-sm">₹{cart?.price * cart?.quantity}</span>
                 </div>
               )
             })
@@ -107,12 +107,12 @@ const Cart = () => {
           <h1 className="font-semibold text-2xl border-b pb-8">Order Summary</h1>
           <div className="flex justify-between mt-10 mb-5">
             <span className="font-semibold text-sm uppercase">Items {carts?.length}</span>
-            <span className="font-semibold text-sm">{total?.toFixed(2)}$</span>
+            <span className="font-semibold text-sm">₹{total?.toFixed(2)}</span>
           </div>
           <div>
             <label className="font-medium inline-block mb-3 text-sm uppercase">Shipping</label>
             <select className="block p-2 text-gray-600 w-full text-sm">
-              <option>Standard shipping - $10.00</option>
+              <option>Standard shipping - ₹10.00</option>
             </select>
           </div>
           <div className="py-10">
@@ -123,7 +123,7 @@ const Cart = () => {
           <div className="border-t mt-8">
             <div className="flex font-semibold justify-between py-6 text-sm uppercase">
               <span>Total cost</span>
-              <span>${(total + 10).toFixed(2)}</span>
+              <span>₹{(total + 10).toFixed(2)}</span>
             </div>
             <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</button>
           </div>

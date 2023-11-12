@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Categories from '../../components/Categories'
-import FeatureCard from '../../components/FeatureCard'
+
 import Hero from '../../components/Hero'
 import ProductCard from '../../components/ProductCard'
 import Products from '../../components/ProductCard'
-import Stats from '../../components/StatCard'
+
 
 const Home = () => {
   const [products, setProducts] = useState([])
@@ -33,7 +33,7 @@ const Home = () => {
         <div>Loading.....</div>
       }
       <Products />
-      <Stats/>
+      
     </>
   )
 }
